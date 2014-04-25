@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function(){
+
+				//set the footer right at the bottom of the page
+				var body = document.body,
+   				html = document.documentElement;
+
+				var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+				//height -= 20;
+				$('#footer').css('top',  (height - 50) + 'px');
+
+				//alerting the user how to close the enlarged div
+				var closeWarning = 0;
+				var scrollValue = 0;
+
+				$('.project').click(function(){
+
+					if(closeWarning == 0){
+
+						closeWarning = 1;
+
+					}
+
+					scrollValue = $('html').scrollTop();
+
+					$('html').scrollTop(0);
+
+					//$('body').css('z-index', '20');
+					$('#blackCover').attr('id', 'blackCoverHighlighted');
+
+					$('body').css('overflow', 'hidden');
+					
+					$(this).addClass('projectHighlighted');
+					$(this).removeClass('project');
+					$(this).children('#cross').css('visibility', 'visible');
+					
+					$(this).children('#description').attr('id', 'visibleDescription');
+					$(this).children('.spacer').height('0px');
+					$(this).children('.date').css('padding-left', '0px');
+
+					$('.dateBr').css('visibility', 'visible').css('position', 'relative').css('left', 'auto');
+
+				});
+
+				
+				$('#blackCover').click(function(){
+					$('.dateBr').css('visibility', 'visible').css('position', 'absolute').css('left', '200000px');
+					$('.projectHighlighted').children('.date').css('padding-left', '10px');
+					$('.projectHighlighted').children('.spacer').height('200px');
+					$('.projectHighlighted').children('#visibleDescription').attr('id', 'description');
+					$('.projectHighlighted').addClass('project');
+					$('.projectHighlighted').removeClass('projectHighlighted');
+					$('#blackCoverHighlighted').attr('id', 'blackCover');
+
+					$('body').css('overflow', 'auto');
+
+					$('html').scrollTop(scrollValue);
+
+					scrollValue = 0;
+				});
+
+			});
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="blackCover"></div>
+		<div id="wrapper">
+			
+			<div id="menu-bar">
+				<div id="logo">
+
+					<a href="index.html">
+
+						gr33nion
+
+					</a>
+
+				</div>
+
+				<nav id="menu">
+
+					<a href="index.html" id='home'>home</a>
+
+					<a href="portfolio.html" id="active">portfolio</a>
+
+					<a href="contact.html" id='contact'>contact</a>
+
+				</nav>
+
+			</div>
+			
+			<div id="content-wrapper">
+
+				<div id="projects">
+
+					<div class="projectWrapper">
+
+						<div class="project">
+							<div id='title'>
+
+								<h3>
+
+									IRC bot
+
+								</h3>	
+
+							</div>
+
+							<sub class="date">
+								Date added: March, 18 2014 5:45 PM
+							</sub><br class="dateBr">
+
+							<p id="description">
+								Suspendisse eget velit risus. Aliquam at felis vel purus elementum placerat. Quisque ac lacinia mi. Quisque eget pellentesque nibh. Sed in nulla nibh. Nunc pharetra tellus est, et lobortis leo pellentesque non. Donec ullamcorper ultrices ultrices. Aliquam id ante felis. Donec nulla ipsum, facilisis in urna nec, varius commodo lectus. Maecenas tempus facilisis turpis, nec fringilla enim pharetra vitae. Integer ante tortor, cursus sed feugiat non, dictum a tellus. Nullam blandit urna eu lorem tincidunt semper.
+							</p>
+							<div class="spacer">
+							</div>
+							<p >
+
+							</p>
+						</div>
+					</div>
+					
+					<div class="projectWrapper">
+
+						<div class="project">
+							<div id='title'>
+
+								<h3>
+
+									IRC bot
+
+								</h3>	
+
+							</div>
+
+							<sub class="date">
+								Date added: March, 18 2014 5:45 PM
+							</sub><br class="dateBr">
+
+							<p id="description">
+								Suspendisse eget velit risus. Aliquam at felis vel purus elementum placerat. Quisque ac lacinia mi. Quisque eget pellentesque nibh. Sed in nulla nibh. Nunc pharetra tellus est, et lobortis leo pellentesque non. Donec ullamcorper ultrices ultrices. Aliquam id ante felis. Donec nulla ipsum, facilisis in urna nec, varius commodo lectus. Maecenas tempus facilisis turpis, nec fringilla enim pharetra vitae. Integer ante tortor, cursus sed feugiat non, dictum a tellus. Nullam blandit urna eu lorem tincidunt semper.
+							</p>
+							<div class="spacer">
+							</div>
+							<p >
+
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div id="footer">
+					gr33nion.com &copy; 2014
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,467 @@
+/*
+	Author: Jake Martin
+	email: gr33nion@gmail.com
+	created:April 2014;
+
+*/
+
+*{
+	margin:0;
+	padding:0;
+
+}
+
+html{
+	height:100%;
+	width:100%;
+
+}
+
+body{
+	height:100%;
+	width:100%;
+}
+
+/*////////////////////text////////////////////*/
+
+h1{
+
+	color:rgb(5,5,5);
+
+	font: 30px sans-serif;
+	font-weight:500;
+
+	text-decoration:none;
+	text-transform: capitalize;
+
+	margin-bottom:20px;
+}
+
+h2{
+
+
+
+}
+
+sub{
+
+	font-family:sans-serif;
+
+}
+
+/*////////////////////ID's////////////////////*/
+
+
+/*          Wrapper around everything         */
+#wrapper{
+
+	height:100%;
+	width:100%;
+
+	padding-top:100px;
+
+	background-color:rgba(252,252,252,1);
+}
+
+
+/*//////////////////////////////////////////////
+//
+//					 MENU
+//
+//////////////////////////////////////////////*/
+
+/*     main top bar (contains logo + menu)    */
+#menu-bar{
+
+	height:50px;
+	width:100%;
+
+	background-color:rgba(240,240,240,1);
+
+	opacity:0.9;
+
+	border-bottom:1px solid rgba(200,200,200,0.5);
+
+	position:fixed;
+	top:0px;
+
+}
+
+#logo{
+
+	margin-top:10px;
+	padding-left:20px;
+	display:inline-block;
+}
+
+#logo a{
+	
+	color:rgb(10 , 10, 10);
+
+	text-decoration:none;
+	text-transform: capitalize;
+
+	font:400 26px sans-serif;
+}
+
+#menu{
+
+	float:right;
+
+	padding-top:17px;
+	margin-right:30%;
+
+	display:inline;
+
+}
+
+#menu a{
+	margin:0;
+
+	padding-right:10px;
+	padding-left:5px;
+
+	border-right:dotted 1px rgb(150, 150, 150);
+
+	color:rgb(130, 130, 130);
+
+	font: 16px sans-serif;
+
+	text-decoration:none;
+	text-transform: capitalize;
+}
+
+#menu a:hover{
+
+	text-decoration:underline;
+}
+
+/*
+		This removes the right border from the last child
+*/
+#menu a:last-child{
+
+	border-right:0;
+
+}
+
+#menu #active{
+
+	font-weight:bold;
+	color:rgb(10,10,10);
+}
+
+#menu #active:hover{
+
+	cursor:default;
+	text-decoration:none;
+}
+
+
+
+
+/*//////////////////////////////////////////////
+//												
+//					 MAIN CONTENT
+//
+//////////////////////////////////////////////*/
+
+#content-wrapper{
+
+	min-height:100%;
+	
+	width:100%;
+
+	
+	text-align:center;
+}
+
+#content{
+
+	//width:700px;
+	width:50%;
+
+	//padding-left:15%;
+	margin:0 auto;
+	margin-bottom:50px;
+
+	font: 17px Georgia, Arial;
+	line-height: 25px;
+
+	//background-color:blue;
+
+	text-align:left;
+}
+
+
+#projects{
+
+	min-height:100%;
+	max-width:100%;
+
+	padding-left:25px;
+	//padding-right:20px;
+
+	text-align:center;
+
+	margin:0 auto;
+
+}
+
+/*/////////////////////Bio/////////////////////*/
+
+
+#bio-wrapper{
+
+	width:40%;
+	height:500px;
+
+	margin:0 auto;
+	text-align:center;
+
+	float:right;
+
+	//background-color:blue;
+
+}
+
+#bio{
+
+}
+
+#bio-picture{
+
+	height:200px;
+	width:auto;
+}
+
+//#bio-picture.resize{
+	//width:310px;
+	//height:310px;
+//}
+
+/*/////////////////////footer//////////////////*/
+
+#footer{
+
+	height:20px;
+	width:100%;
+
+	padding-top:18px;
+	padding-bottom:18px;
+
+	color:rgb(50, 50, 50);
+
+	font-size:16px;
+	text-align:center;
+
+	position:absolute;
+
+	bottom:;
+	
+}
+
+/*//////////////////////////////////////////////
+//												
+//					 MISC ID's
+//
+//////////////////////////////////////////////*/
+
+/*/////////////////Used in the porfolio page////////*/
+
+#blackCoverHighlighted{
+
+	min-height:100%;
+	width:100%;
+
+	z-index:20;
+	background-color:black;
+	opacity:0.7;
+	position:absolute;
+	
+	visibility:visible;
+	overflow:auto;
+
+}
+#blackCover{
+
+	min-height:0;
+	width:0;
+
+	z-index:0;
+	background-color:white;
+	opacity:1;
+	position:absolute;
+	
+	visibility:hidden;
+	overflow:auto;
+
+}
+
+
+#cross{
+
+	position:absolute;
+	visibility:hidden;
+
+	top:0px;
+	right:-10px;
+
+	font-family:sans-serif;
+
+	line-height:9px;
+
+	cursor:pointer;
+
+	opacity:0.99;
+
+	z-index:30;
+}
+
+
+#login{
+
+	font-size:12px;
+
+	color:rgba(30, 30, 30, 1);
+
+	text-decoration:none;
+}
+/*//////////////////class's////////////////////*/
+
+
+/*//////////////////////////////////////////////
+//												
+//					 Projects
+//
+//////////////////////////////////////////////*/
+
+.projectWrapper{
+
+	height:200px;
+	width:300px;
+
+	display:inline-block;
+
+	padding-top:20px;
+	//padding-left:
+	padding-right:20px;
+
+	text-align:center;
+
+}
+
+.projectWrapper:last-child{
+
+	padding-right:0;
+
+
+}
+
+.project{
+
+	height:100%;
+	width:100%;
+
+	//position:relative;
+
+	overflow:hidden;
+
+	border-radius:3px;
+	border:1px solid rgb(150,150,150);
+
+	box-shadow:1px 1px 0px rgb(200,200,200);
+
+	background-color:rgb(240, 240, 240);
+	font: 17px Georgia, Arial;
+}
+
+.project:hover{
+
+	border-color:rgb(0,0,255);
+
+	box-shadow:none;
+}
+
+
+.project sub{
+
+	font-size:11px;
+	text-align: left;
+}
+
+.projectHighlighted{
+
+	height:85%;
+	width:70%;
+
+	margin:0 auto;
+
+	padding-top:20px;
+	padding-left:20px;
+	padding-right:20px;
+
+	position:absolute;
+
+	z-index:21;
+
+	text-align:left;
+
+	left:15%;
+	top:60px;
+	opacity:0.99;
+
+	border-radius:3px;
+	border:1px solid rgb(150,150,150);
+
+	background-color:rgb(255, 255, 255);
+
+}
+
+
+#title{
+
+	text-align:center;
+
+	float:center;
+
+	font-family: sans-serif;
+}
+#description{
+
+	text-align:left;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+
+}
+
+#visibleDescription{
+
+	text-align:left;
+	min-height:50px;
+
+	padding-top:5px;
+}
+
+.spacer{
+
+	height:200px;
+}
+
+.date{
+
+	float:left;
+	padding-left:10px;
+
+	display:block;
+
+	font: 15px ;
+}
+.dateBr{
+
+	display:inline;
+	position:absolute;
+	left:200000px;
+
+}
